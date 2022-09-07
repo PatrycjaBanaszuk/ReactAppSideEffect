@@ -42,7 +42,7 @@ const Login = props => {
 		isValid: false,
 	})
 
-	const AuthCtx = useContext(AuthContext)
+	const authCtx = useContext(AuthContext)
 
 const { isValid: emailIsValid } = emailState;
 const { isValid: passwordIsValid } = passwordState;
@@ -80,7 +80,7 @@ const { isValid: passwordIsValid } = passwordState;
 
 	const submitHandler = event => {
 		event.preventDefault()
-		AuthCtx.onLogin(emailState.value, passwordState.value)
+		authCtx.onLogin(emailState.value, passwordState.value)
 	}
 
 	return (

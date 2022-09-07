@@ -13,7 +13,7 @@ export const AuthContexProvider = props => {
 		const storedUserLoggedInInformation = localStorage.getItem('isLoggedIn')
 
 		if (storedUserLoggedInInformation === '1') {
-			setIsLoggedIn('true')
+			setIsLoggedIn(true)
 		}
 	}, [])
 
@@ -27,7 +27,7 @@ export const AuthContexProvider = props => {
 	}
 
 	return (
-		<AuthContext.Provider value={{ isLoggedIn: isLoggedIn, onLogout: logoutHandler, onLogin: loginHandler }}>
+		<AuthContext.Provider value={{ isLoggedIn: isLoggedIn, onLogout: logoutHandler, onLogin: loginHandler, }}>
 			{props.children}
 		</AuthContext.Provider>
 	)

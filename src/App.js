@@ -10,8 +10,8 @@ function App() {
 		<React.Fragment>
 				<MainHeader />
 				<main>
-					{!ctx.isLoggedInisLoggedIn && <Login />}
-					{ctx.isLoggedInisLoggedIn && <Home />}
+					{!ctx.isLoggedIn && <Login />}
+					{ctx.isLoggedIn && <Home />}
 				</main>
 		</React.Fragment>
 	)
